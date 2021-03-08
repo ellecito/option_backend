@@ -35,6 +35,13 @@ router.get('/list/:v', (req, res) => {
 
 app.use(router);
 
-app.listen(3000, function () {
-    console.log("Node server running on http://localhost:3000");
+let port = process.env.PORT;
+if (port == null || port == "") {
+    port = 8000;
+} else {
+    port = 3000;
+}
+
+app.listen(port, function () {
+    console.log("Node server running on http://localhost:" + port);
 });
