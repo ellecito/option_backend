@@ -37,8 +37,6 @@ app.use(router);
 
 let port = process.env.PORT;
 if (port == null || port == "") {
-    port = 8000;
-} else {
     port = 3000;
 }
 
